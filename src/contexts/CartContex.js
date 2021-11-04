@@ -1,14 +1,14 @@
 import React, { createContext, useReducer } from "react";
 import { CartReducer } from "./CarReducer";
 
-export const CartContext = createContext();
-
 const initialState = {
     cartItems: [],
     itemCount: 0,
     total: 0.0,
-    chechout: false
+    checkhout: false
 };
+
+export const CartContext = createContext(initialState);
 
 const CartContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(CartReducer, initialState);
