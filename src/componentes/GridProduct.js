@@ -18,17 +18,17 @@ export const itemInicial = [
 const Gridproduct = () => {
     const [items, setItems] = useState(itemInicial);
     return (
-        <section className="py-2">
+        <div className="container">
             <div className="row">
                 {items.map((gridItem, index) => {
                     return (
-                        <div className="col mb-3">
-                            <GridItem key={gridItem.id} product={gridItem} />
+                        <div id="cardItem" className="col-md-4 p-1">
+                            <GridItem key={gridItem.id} product={gridItem}/>
                         </div>
                     );
                 })}
             </div>
-        </section>
+        </div>
     );
 }
 export default Gridproduct;
